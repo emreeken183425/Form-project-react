@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 const Form=()=> {
 const [username,setUsername]=useState("");
 const [email,setEmail]=useState('');
@@ -14,8 +14,8 @@ const handleSubmit=()=>{
 }
   
 return (
-    <div  style={{margin:'5rem' }} >
-      <form style={{margin:'5rem' }} onSubmit={handleSubmit} >
+    <div  style={{margin:'5rem' }}  >
+      <form style={{margin:'5rem' }} onSubmit={ handleSubmit} >
       <div className="mb-3">
     <label  style={{margin:'5rem' }} htmlFor="username" className="form-label">User Name <span className='text-primary' >:{username} </span> </label><br />
     <input  style={{margin:'1rem' }} type="text" className="form-control" value={username} id="username" onChange={(e)=> setUsername(e.target.value)}  />
